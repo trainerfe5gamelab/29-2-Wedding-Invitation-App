@@ -1,0 +1,26 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f4f3;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  font-family: 'Dancing Script', cursive;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #555;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #e08e79;
+}
+
+section {
+  padding: 60px 0;
+}
+
+section h2 {
+  margin-bottom: 20px;
+}
