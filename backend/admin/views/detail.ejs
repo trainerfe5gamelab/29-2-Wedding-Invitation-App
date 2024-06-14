@@ -1,0 +1,92 @@
+<!-- detail.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+        a {
+            display: block;
+            text-align: center;
+            margin: 20px;
+            text-decoration: none;
+            color: #000;
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Order Details</h1>
+    <table>
+        <tr>
+            <th>Order ID</th>
+            <td><%= pesanan.order_id %></td>
+        </tr>
+        <tr>
+            <th>Nama Mempelai Pria</th>
+            <td><%= pesanan.male_name %></td>
+        </tr>
+        <tr>
+            <th>Nama Mempelai Wanita</th>
+            <td><%= pesanan.female_name %></td>
+        </tr>
+        <tr>
+            <th>Bapak dan Ibu Mempelai Pria</th>
+            <td><%= pesanan.bi_male %></td>
+        </tr>
+        <tr>
+            <th>Bapak dan Ibu Mempelai Wanita</th>
+            <td><%= pesanan.bi_female %></td>
+        </tr>
+        <tr>
+            <th>Alamat dan No.Telp</th>
+            <td><%= pesanan.quotes %></td>
+        </tr>
+        <tr>
+            <th>Tema</th>
+            <td><%= pesanan.theme %></td>
+        </tr>
+        <tr>
+            <th>File Photo</th>
+            <td>
+                <% if (pesanan.photo) { %>
+                    <img src="/<%= pesanan.photo %>" width="200" height="200" alt="Order Photo"/>
+                    <a href="/<%= pesanan.photo %>" download>Download Photo</a>
+                <% } else { %>
+                    No photo
+                <% } %>
+            </td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td><%= pesanan.status %></td>
+        </tr>
+    </table>
+    <a href="/">Kembali Ke Dashboard</a>
+</body>
+</html>
