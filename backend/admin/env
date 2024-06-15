@@ -1,0 +1,3 @@
+DATABASE_URL=mongodb+srv://ariffirmansyah1526:lQtMlHZYsKa62ahT@cluster0.cv2tkul.mongodb.net/
+secret=your_jwt_secrret
+APP_PORT=3000
